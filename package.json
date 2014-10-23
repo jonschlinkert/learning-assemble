@@ -1,0 +1,10 @@
+{
+  "name": "hello-assemble",
+  "version": "1.0.0",
+  "description": "Minimal Assemble project",
+  "author": "James Wing",
+  "devDependencies": {
+    "assemble": "^0.4.42",
+    "grunt": "^0.4.5"
+  }
+}
