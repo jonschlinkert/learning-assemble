@@ -2,9 +2,14 @@ module.exports = function (grunt) {
     grunt.initConfig({
         assemble: {
             hello: {
-                files: {
-                    'output/': ['index.hbs']
-                }
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'source/templates/pages',
+                        src: '**/*.hbs',
+                        dest: 'output/'
+                    }
+                ]
             }
         }
     });
