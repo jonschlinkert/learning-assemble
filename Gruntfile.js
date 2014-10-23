@@ -18,7 +18,8 @@ module.exports = function (grunt) {
                     base: ['output'],
                     port: 9000,
                     hostname: 'localhost',
-                    keepalive: false
+                    keepalive: false,
+                    livereload: 35729
                 }
             }
         },
@@ -26,13 +27,19 @@ module.exports = function (grunt) {
             templates: {
                 files: ['source/templates/**/*.hbs'],
                 tasks: ['assemble']
+            },
+            livereload: {
+                options: {
+                    livereload: '<%= connect.preview.options.livereload %>'
+                },
+                files: ['output/**.*']
             }
         }
     });
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    
+
     grunt.registerTask('build', ['assemble']);
     grunt.registerTask('server', ['build','connect','watch']);
 };
