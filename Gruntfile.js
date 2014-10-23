@@ -12,6 +12,16 @@ module.exports = function (grunt) {
                 ]
             }
         },
+        connect: {
+            preview: {
+                options: {
+                    base: ['output'],
+                    port: 9000,
+                    hostname: 'localhost',
+                    keepalive: true
+                }
+            }
+        },
         watch: {
             templates: {
                 files: ['source/templates/**/*.hbs'],
@@ -20,5 +30,6 @@ module.exports = function (grunt) {
         }
     });
     grunt.loadNpmTasks('assemble');
+    grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
 };
