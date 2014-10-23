@@ -18,7 +18,7 @@ module.exports = function (grunt) {
                     base: ['output'],
                     port: 9000,
                     hostname: 'localhost',
-                    keepalive: true
+                    keepalive: false
                 }
             }
         },
@@ -32,4 +32,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('assemble');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    
+    grunt.registerTask('build', ['assemble']);
+    grunt.registerTask('server', ['build','connect','watch']);
 };
