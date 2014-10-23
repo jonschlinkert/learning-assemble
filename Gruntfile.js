@@ -11,7 +11,14 @@ module.exports = function (grunt) {
                     { expand: true, cwd: 'source/templates/pages', src: '**/*.hbs', dest: 'output/' }
                 ]
             }
+        },
+        watch: {
+            templates: {
+                files: ['source/templates/**/*.hbs'],
+                tasks: ['assemble']
+            }
         }
     });
     grunt.loadNpmTasks('assemble');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 };
