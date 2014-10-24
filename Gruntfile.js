@@ -3,6 +3,7 @@ module.exports = function (grunt) {
         assemble: {
             hello: {
                 options: {
+                    data: 'source/data/*.{json,yml}',
                     layoutdir: 'source/templates/layouts',
                     layout: 'default.hbs',
                     partials: 'source/templates/partials/**/*.hbs'
