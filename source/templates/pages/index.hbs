@@ -1,6 +1,18 @@
 ---
 title: "Home"
 message: We have lots of cool stuff
+promotions:
+ one:
+  title: "Promotion 1"
+ two:
+  title: "Promotion 2"
+ three:
+  title: "Promotion 3"
 ---
 <h1>{{title}}</h1>
 <p>{{message}}</p>
+<ul>
+    {{#each promotions}}
+        <li>{{title}}</li>
+    {{/each}}
+</ul>
