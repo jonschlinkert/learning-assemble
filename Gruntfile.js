@@ -6,7 +6,10 @@ module.exports = function (grunt) {
                     data: 'source/data/*.{json,yml}',
                     layoutdir: 'source/templates/layouts',
                     layout: 'default.hbs',
-                    partials: 'source/templates/partials/**/*.hbs'
+                    partials: 'source/templates/partials/**/*.hbs',
+                    collections: [
+                        { name: 'navTags', inflection: 'navTag' }
+                    ]
                 },
                 files: [
                     { expand: true, cwd: 'source/templates/pages', src: '**/*.hbs', dest: 'output/' }
