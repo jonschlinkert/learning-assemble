@@ -12,7 +12,7 @@ module.exports = function (grunt) {
                     ]
                 },
                 files: [
-                    { expand: true, cwd: 'source/templates/pages', src: '**/*.hbs', dest: 'output/' }
+                    { expand: true, cwd: 'source/templates/pages', src: '**/*.{hbs,md}', dest: 'output/' }
                 ]
             }
         },
