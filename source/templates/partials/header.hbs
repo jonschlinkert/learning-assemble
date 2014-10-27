@@ -1,6 +1,6 @@
 <div>
-    <a href="/">Home</a> |
-    <a href="/features.html">Features</a> |
-    <a href="/pricing.html">Pricing</a> |
-    <a href="/about.html">About</a>
+    {{#each pages}}
+        <a href="{{relativeLink}}">{{data.title}}</a>{{#unless last}} |{{/unless}}
+    {{/each}}
 </div>
+
