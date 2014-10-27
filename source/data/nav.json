@@ -1,0 +1,24 @@
+{
+    "footer" : [
+        {
+            "label" : "Home",
+            "href" : "/index.html"
+        },
+        {
+            "label" : "Features",
+            "href" : "/features.html"
+        },
+        {
+            "label" : "Pricing",
+            "href" : "/pricing.html"
+        },
+        {
+            "label" : "About",
+            "href" : "/about.html"
+        },
+        {
+            "label" : "Privacy",
+            "href" : "/privacy.html"
+        }
+    ]
+}
