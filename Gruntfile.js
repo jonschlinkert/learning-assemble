@@ -9,7 +9,8 @@ module.exports = function (grunt) {
                     partials: 'source/templates/partials/**/*.hbs',
                     collections: [
                         { name: 'navTags', inflection: 'navTag' }
-                    ]
+                    ],
+                    helpers: ['source/helpers/**/*.js']
                 },
                 files: [
                     { expand: true, cwd: 'source/templates/pages', src: '**/*.{hbs,md}', dest: 'output/' }
@@ -30,7 +31,7 @@ module.exports = function (grunt) {
         },
         watch: {
             templates: {
-                files: ['source/templates/**/*.{hbs,md}','source/data/**/*.json'],
+                files: ['source/templates/**/*.{hbs,md}','source/data/**/*.json','source/helpers/**/*.js'],
                 tasks: ['assemble']
             },
             livereload: {
