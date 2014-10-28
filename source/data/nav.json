@@ -13,6 +13,10 @@
             "href" : "/pricing.html"
         },
         {
+            "label" : "Blog",
+            "href" : "/blog.html"
+        },
+        {
             "label" : "About",
             "href" : "/about.html"
         },

@@ -1,6 +1,9 @@
 ---
 layout: default.hbs
 ---
+<h1>{{title}}</h1>
+By {{author}} on {{formatDate posted "%F"}}
+{{#markdown}}{{summary}}{{/markdown}}
 {{#markdown}}
-{{> body }}
+    {{> body }}
 {{/markdown}}

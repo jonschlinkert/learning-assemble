@@ -2,7 +2,7 @@
     {{#each navTags}}
         {{#is navTag "header"}}
             {{#withSort pages 'data.navSort'}}
-                <a href="{{relativeLink}}">{{data.navLabel}}</a>{{#unless last}} |{{/unless}}
+                <a href="/{{relativeLink}}">{{data.navLabel}}</a>{{#unless last}} |{{/unless}}
             {{/withSort}}
         {{/is}}
     {{/each}}

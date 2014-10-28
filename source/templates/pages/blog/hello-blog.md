@@ -1,6 +1,15 @@
 ---
 title: Hello, Blog!
 layout: blog-layout.hbs
+navTags:
+ - blog
+posted: 2014-10-01
+author: James
+summary: |
+ This is the summary of our first
+ blog post. It will cover:
+  * Stuff
+  * More Stuff
+  * Even More Stuff
 ---
-# {{title}}
-This is our first blog post.
+This is the lowly body of our first blog post.

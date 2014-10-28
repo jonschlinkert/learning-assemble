@@ -1,0 +1,25 @@
+---
+title: Blog
+navTags:
+- header
+- footer
+navLabel: Blog
+navSort: 60
+---
+<h1>{{title}}</h1>
+<div>
+    {{#each navTags}}
+        {{#is navTag "blog"}}
+            {{#withSort pages "data.posted" dir="desc"}}
+                <div>
+                    <h2><a href="/{{relativeLink}}">{{data.title}}</a></h2>
+                    <p>By {{data.author}} on {{formatDate data.posted "%F"}}</p>
+                    <div>
+                        {{#markdown}}{{data.summary}}{{/markdown}}
+                    </div>
+                    <p><a href="/{{relativeLink}}">more...</a></p>
+                </div>
+            {{/withSort}}
+        {{/is}}
+    {{/each}}
+</div>
