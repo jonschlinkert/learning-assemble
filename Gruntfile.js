@@ -30,7 +30,7 @@ module.exports = function (grunt) {
         },
         watch: {
             templates: {
-                files: ['source/templates/**/*.hbs'],
+                files: ['source/templates/**/*.{hbs,md}','source/data/**/*.json'],
                 tasks: ['assemble']
             },
             livereload: {
