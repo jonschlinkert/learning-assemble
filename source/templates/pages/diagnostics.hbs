@@ -1,0 +1,25 @@
+---
+title: Diagnostics
+---
+<h1>{{title}}</h1>
+<table>
+	<thead>
+		<tr>
+			<th>basename</th>
+			<th>relativeLink</th>
+			<th>data.title</th>
+			<th>data.navSort</th>
+			<th>data</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each pages}}
+		<tr>
+			<td>{{basename}}</td>
+			<td>{{relativeLink}}</td>
+			<td>{{data.title}}</td>
+			<td>{{data.navSort}}</td>
+			<td>{{stringify data}}</td>
+		{{/each}}
+	</tbody>
+</table>
