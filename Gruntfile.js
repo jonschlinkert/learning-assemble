@@ -10,7 +10,13 @@ module.exports = function (grunt) {
                     collections: [
                         { name: 'navTags', inflection: 'navTag' }
                     ],
-                    helpers: ['source/helpers/**/*.js']
+                    helpers: ['source/helpers/**/*.js'],
+                    plugins: ['assemble-middleware-sitemap'],
+                    sitemap: {
+                        homepage: "http://awesome-site.bogus",
+                        exclude: ['diagnostics'],
+                        changefreq: 'monthly'
+                    }
                 },
                 files: [
                     { expand: true, cwd: 'source/templates/pages', src: '**/*.{hbs,md}', dest: 'output/' }
