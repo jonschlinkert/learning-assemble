@@ -14,6 +14,7 @@ module.exports = function (grunt) {
                     plugins: ['assemble-middleware-sitemap'],
                     sitemap: {
                         homepage: "http://awesome-site.bogus",
+                        relativedest: true,
                         exclude: ['diagnostics'],
                         changefreq: 'monthly'
                     }
