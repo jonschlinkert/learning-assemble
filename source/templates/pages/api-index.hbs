@@ -1,0 +1,12 @@
+---
+title: "Index"
+---
+<ul>
+	{{#each pages}}
+		{{#unless this.isCurrentPage}}
+			<li>
+				<a href="{{relativeLink}}">{{data.title}}</a>
+			</li>
+		{{/unless}}
+	{{/each}}
+</ul>

@@ -1,5 +1,6 @@
 module.exports = function (grunt) {
     grunt.initConfig({
+        api : grunt.file.readJSON('source/data/api.json'),
         assemble: {
             hello: {
                 options: {
@@ -20,8 +21,19 @@ module.exports = function (grunt) {
                     }
                 },
                 files: [
-                    { expand: true, cwd: 'source/templates/pages', src: '**/*.{hbs,md}', dest: 'output/' }
+                    { expand: true, cwd: 'source/templates/pages', src: ['**/*.{hbs,md}', '!api-index.hbs'], dest: 'output/' }
                 ]
+            },
+            api: {
+                options: {
+                    flatten: true,
+                    layout: 'source/templates/layouts/api-layout.hbs',
+                    pages: '<%= api.pages %>'
+                }
+                ,
+                files: {
+                  'output/api/': ['source/templates/pages/api-index.hbs']
+                }
             }
         },
         clean: ['output/**'],

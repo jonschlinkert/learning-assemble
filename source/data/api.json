@@ -1,0 +1,11 @@
+{
+	"pages": [
+		{
+			"data": {
+				"title": "authenticate"
+			},
+			"content": "Docs for API method: authenticate",
+			"filename": "authenticate.html"
+		}
+	]
+}
