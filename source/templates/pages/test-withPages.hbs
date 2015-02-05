@@ -1,0 +1,78 @@
+---
+title: withPages Test
+posts:
+ - lame
+---
+<h1>{{title}}</h1>
+
+<h2>Recent Posts</h2>
+<ul>
+    {{#withPages collection="posts" inflection="post" value="all" sortBy="data.posted" dir="desc" limit=5}}
+        <li>{{formatDate data.posted "%F"}}: Post - {{data.title}} ({{basename}})</li>
+    {{/withPages}}
+</ul>
+
+{{#if 0}}
+<h2>Collection Happy Path</h2>
+<ul>
+    {{#withPages name="CollectionHappyPath" collection="posts" inflection="post" value="all" sortBy="data.posted" dir="desc" limit=4 verbose=false}}
+        <li>{{formatDate data.posted "%F"}}: Post - {{data.title}} ({{basename}})</li>
+    {{/withPages}}
+</ul>
+{{/if}}
+
+
+{{#if 0}}
+    <h2>All Pages Happy Path</h2>
+    <ul>
+        {{#withPages name="AllPagesHappyPath" sortBy="data.posted" dir="desc" limit=4 verbose=true}}
+            <li>{{formatDate data.posted "%F"}}: Post - {{data.title}} ({{basename}})</li>
+        {{/withPages}}
+    </ul>
+{{/if}}
+
+{{#if 0}}
+<h2>Nonexistent Collection</h2>
+<ul>
+    {{#withPages pages name="NonExistentCollection" collection="bogus" inflection="post" value="all" sortBy="data.posted" dir="desc" limit=4 verbose=true}}
+        <li>{{formatDate data.posted "%F"}}: Post - {{data.title}} ({{basename}})</li>
+    {{/withPages}}
+</ul>
+{{/if}}
+
+{{#if 0}}
+<h2>Nonexistent Inflection</h2>
+<ul>
+    {{#withPages pages collection="posts" inflection="bogus" value="all" sortBy="data.posted" dir="desc" limit=4}}
+        <li>{{formatDate data.posted "%F"}}: Post - {{data.title}} ({{basename}})</li>
+    {{/withPages}}
+</ul>
+{{/if}}
+
+{{#if 0}}
+<h2>Nonexistent Inflection Value</h2>
+<ul>
+    {{#withPages pages collection="posts" inflection="post" value="allx" sortBy="data.posted" dir="desc" limit=4 verbose=true}}
+        <li>{{formatDate data.posted "%F"}}: Post - {{data.title}} ({{basename}})</li>
+    {{/withPages}}
+</ul>
+{{/if}}
+
+{{#if 0}}
+<h2>Nonexistent sortBy</h2>
+<ul>
+    {{#withPages pages collection="posts" inflection="post" value="all" sortBy="posted" dir="desc" limit=4 verbose=true}}
+        <li>{{formatDate data.posted "%F"}}: Post - {{data.title}} ({{basename}})</li>
+    {{/withPages}}
+</ul>
+{{/if}}
+
+{{#if 0}}
+<h2>Unrecognized sort direction</h2>
+<ul>
+    {{#withPages pages collection="posts" inflection="post" value="all" sortBy="posted" dir="ascx" limit=4 verbose=true}}
+        <li>{{formatDate data.posted "%F"}}: Post - {{data.title}} ({{basename}})</li>
+    {{/withPages}}
+</ul>
+{{/if}}
+
