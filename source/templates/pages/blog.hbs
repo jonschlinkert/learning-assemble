@@ -8,9 +8,9 @@ navSort: 60
 ---
 <h1>{{title}}</h1>
 <div>
-    {{#each navTags}}
-        {{#is navTag "blog"}}
-            {{#withSort pages "data.posted" dir="desc"}}
+    {{#each posts}}
+        {{#is post "all"}}
+            {{#withFirst pages 5}}
                 <div>
                     <h2><a href="/{{relativeLink}}">{{data.title}}</a></h2>
                     <p>By {{data.author}} on {{formatDate data.posted "%F"}}</p>
@@ -19,7 +19,7 @@ navSort: 60
                     </div>
                     <p><a href="/{{relativeLink}}">more...</a></p>
                 </div>
-            {{/withSort}}
+            {{/withFirst}}
         {{/is}}
     {{/each}}
 </div>

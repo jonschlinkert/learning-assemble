@@ -9,7 +9,8 @@ module.exports = function (grunt) {
                     layout: 'default.hbs',
                     partials: 'source/templates/partials/**/*.hbs',
                     collections: [
-                        { name: 'navTags', inflection: 'navTag' }
+                        { name: 'navTags', inflection: 'navTag' },
+                        { name: 'posts', inflection: 'post', sortby: 'posted', sortorder: 'desc' }
                     ],
                     helpers: ['source/helpers/**/*.js'],
                     plugins: ['assemble-middleware-sitemap'],

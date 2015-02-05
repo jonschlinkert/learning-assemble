@@ -1,8 +1,8 @@
 ---
 title: Keyword Stuffing
 layout: blog-layout.hbs
-navTags:
- - blog
+posts:
+ - all
 posted: 2014-10-14
 author: James
 summary: |

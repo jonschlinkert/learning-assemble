@@ -1,8 +1,8 @@
 ---
 title: Hello, Blog!
 layout: blog-layout.hbs
-navTags:
- - blog
+posts:
+ - all
 posted: 2014-10-01
 author: James
 summary: |
