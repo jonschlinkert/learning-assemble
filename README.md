@@ -15,7 +15,7 @@ This project contains the code samples from the [related 12-part blog series]:
 - [Step 11 - More navigation][11-more-navigation]
 - [Step 12 - Navigation helper][12-navigation-helper]
 
-[related blog series]: http://opsbynumbers.com/2014/10/22/learning-assemble-step-1-hello-assemble/
+[related 12-part blog series]: http://opsbynumbers.com/2014/10/22/learning-assemble-step-1-hello-assemble/
 
 [01-hello-assemble]: https://github.com/jvwing/learning-assemble/tree/step01-hello-assemble
 [02-basic-templating]: https://github.com/jvwing/learning-assemble/tree/step02-basic-templating
